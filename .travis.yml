@@ -4,7 +4,7 @@ services:
 before_install:
   - docker build -t sivanagachalla/first_repo:v1.0 .
 script:
-  - echo "password" | docker login -u "username" --password-stdin
+  - echo "$password" | docker login -u "$username" --password-stdin
   - docker images
   - docker push sivanagachalla/first_repo:v1.0
 notifications:
